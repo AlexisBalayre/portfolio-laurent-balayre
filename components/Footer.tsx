@@ -7,8 +7,8 @@ export const Footer = () => {
 
   return (
     <footer className="bg-neutral text-white py-10" id="contact">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center mb-8">
+      <div className="container mx-auto md:px-4 px-6">
+        <div className="flex flex-row justify-between items-center mb-8">
           <div className="text-2xl font-bold mb-4 md:mb-0 hidden md:block">Laurent Balayre</div>
           <nav className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
             {[
@@ -29,7 +29,7 @@ export const Footer = () => {
             ))}
           </nav>
         </div>
-        <div className="border-t border-blue-400 pt-4 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-blue-400 pt-4 flex flex-row justify-between items-center">
           <p className="text-sm mb-2 md:mb-0">
             Copyright © {currentYear} Laurent Balayre. Tous droits réservés.
           </p>

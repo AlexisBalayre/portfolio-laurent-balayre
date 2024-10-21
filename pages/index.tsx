@@ -13,7 +13,7 @@ const Home: NextPage = () => {
                 {/* Hero Section */}
                 <section className="bg-gray-50 py-20 md:py-32" id="aboutMe">
                     <div className="container mx-auto px-4">
-                        <div className="flex flex-col lg:flex-row items-center justify-between">
+                        <div className="grid md:flex md:flex-col lg:flex-row items-center justify-between">
                             <div className="lg:w-1/2 lg:pr-12 mb-10 lg:mb-0">
                                 <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gray-900">
                                     Laurent Balayre
@@ -27,9 +27,9 @@ const Home: NextPage = () => {
                                     href="https://www.linkedin.com/in/laurentbalayre/" 
                                     target="_blank" 
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center bg-[#0077B5] hover:bg-[#006699] text-white font-bold py-3 px-6 rounded-full transition duration-300 shadow-md"
+                                    className="inline-flex items-center bg-[#0077B5] hover:bg-[#006699] text-white font-bold py-3 px-6 rounded-full transition duration-300 shadow-md "
                                 >
-                                    <FaLinkedin className="mr-2" />
+                                    <FaLinkedin className="mr-2 " />
                                     Suivre sur LinkedIn
                                 </a>
                             </div>
