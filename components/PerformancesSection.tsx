@@ -17,8 +17,8 @@ interface Success {
 
 const PerformanceCard = ({ success }: { success: Success }) => {
   return (
-    <div className="bg-white rounded-lg shadow-md p-6">
-      <div className="flex justify-between items-center mb-3">
+    <div className="bg-white rounded-lg shadow-md p-6 flex flex-col h-full">
+      <div className="mb-3">
         <h3 className="text-xl font-bold">{success.name}</h3>
         <div className="flex items-center text-gray-600">
           <FaRegCalendarAlt className="mr-1" />
@@ -30,10 +30,10 @@ const PerformanceCard = ({ success }: { success: Success }) => {
           {success.highlight}
         </span>
       </div>
-      <p className="text-sm text-gray-600 mb-4">{success.description}</p>
-      <div className="flex items-center justify-between">
-        <div className="flex items-center space-x-2">
-          <Image src={success.logo} alt={success.name} width={80} height={80}/>
+      <p className="text-sm text-gray-600 mb-4 flex-grow">{success.description}</p>
+      <div className="mt-auto">
+        <div className="flex items-center space-x-2 mb-2">
+          <Image src={success.logo} alt={success.name} width={80} height={80} />
           {success.acquirer && (
             <>
               <FaHandshake className="text-green-500 text-3xl mx-2" />
@@ -42,7 +42,9 @@ const PerformanceCard = ({ success }: { success: Success }) => {
           )}
         </div>
         {success.acquirer && (
-          <span className="text-xs text-gray-500">Acquis par {success.acquirer.name}</span>
+          <div className="text-right">
+            <span className="text-xs text-gray-500">Acquis par {success.acquirer.name}</span>
+          </div>
         )}
       </div>
     </div>
