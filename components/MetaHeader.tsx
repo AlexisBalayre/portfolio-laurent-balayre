@@ -17,13 +17,13 @@ export const MetaHeader = () => {
         property="og:description"
         content="Explorez les succès et les investissements de Laurent Balayre dans le secteur technologique, de AS INFOR à ContentSquare."
       />
-      <meta property="og:image" content="https://laurent-balayre.com/preview.png" />
+      <meta property="og:image" content="https://laurent.balayre.com/preview.png" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta
         name="twitter:description"
         content="Découvrez le parcours de Laurent Balayre, de l'entrepreneuriat à l'investissement dans des startups innovantes."
       />
-      <meta name="twitter:image" content="https://laurent-balayre.com/preview.png" />
+      <meta name="twitter:image" content="https://laurent.balayre.com/preview.png" />
       <meta
         name="keywords"
         content="Laurent Balayre, Entrepreneur, Investisseur, Tech, Startup, Innovation, AS INFOR, ContentSquare, SaaS, Retail"
