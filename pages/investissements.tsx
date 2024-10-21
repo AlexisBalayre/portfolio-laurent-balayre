@@ -1,214 +1,175 @@
-import Head from 'next/head';
-import { useEffect, useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import React from "react";
+import Head from "next/head";
+import Image from "next/image";
+import { FaTrophy, FaChartLine, FaHandshake } from 'react-icons/fa';
+import { PerformancesSection } from "~~/components/PerformancesSection";
 
-export default function InvestmentsPage() {
-    interface Investment {
-        name: string;
-        year: number;
-        description: string;
-        logo: string;
-        website: string;
-    }
+const InvestmentsPage = () => {
+    const investments = [
+        { name: "AS INFOR", year: 1994, logo: "/assets/images/asinfor-logo.png", description: "Éditeur de logiciels de gestion pour le retail." },
+        { name: "SQUARE CLOCK", year: 2009, logo: "/assets/images/square-clock.jpg", description: "Solution de gestion du temps pour les entreprises." },
+        { name: "Navidis", year: 2009, logo: "/assets/images/navidis.jpeg", description: "Gestion de votre territoire." },
+        { name: "Carré de boeuf", year: 2009, logo: "/assets/images/carre-de-boeuf.jpeg", description: "E-commerce de viande." },
+        { name: "Idées À Faire", year: 2009, logo: "/assets/images/IAF.jpg", description: "Magazine de DIY." },
+        { name: "SaasValue", year: 2010, logo: "/assets/images/saasvalue.jpg", description: "Performance Improvement." },
+        { name: "ContentSquare", year: 2011, logo: "/assets/images/CS.png", description: "Plateforme d'analyse de l'expérience digitale." },
+        { name: "CodinGame", year: 2011, logo: "/assets/images/codingame.png", description: "Plateforme de coding challenges et recrutement tech." },
+        { name: "Cozy.io", year: 2011, logo: "/assets/images/cozy.png", description: "Solution de stockage cloud personnel sécurisé." },
+        { name: "Urban-Cab", year: 2012, logo: "/assets/images/urban-cab.jpg", description: "Éco-Solution du Dernier Kilomètre." },
+        { name: "Roofstreet", year: 2012, logo: "/assets/images/roofstreet.png", description: "Analyse des comportements de déplacement urbain." },
+        { name: "Elevo", year: 2012, logo: "/assets/images/elevo.png", description: "Plateforme de gestion de la performance et des talents." },
+        { name: "Qemotion", year: 2013, logo: "/assets/images/qemotion.png", description: "Analyse des émotions à partir des commentaires clients." },
+        { name: "AddWorking", year: 2014, logo: "/assets/images/addworking.png", description: "Solution de gestion des sous-traitants et travailleurs indépendants." },
+        { name: "Lady Cookie", year: 2014, logo: "/assets/images/ladycookies.jpg", description: "Marque de cookies artisanaux haut de gamme." },
+        { name: "Augmented Magic", year: 2014, logo: "/assets/images/augmented-magic.png", description: "Digital Magic Show Experience" },
+        { name: "Tigerlily", year: 2014, logo: "/assets/images/tigerlily.png", description: "Solution de marketing social pour les entreprises multi-sites." },
+        { name: "Confiant", year: 2015, logo: "/assets/images/confiant.png", description: "Sécurité publicitaire pour protéger contre les malvertisements." },
+        { name: "Wittyfit", year: 2016, logo: "/assets/images/wittyfit.png", description: "Plateforme pour améliorer le bien-être des collaborateurs en entreprise." },
+        { name: "Canobio", year: 2016, logo: "/assets/images/canobio.png", description: "Marque de maillots de bain éco-responsables." },
+        { name: "Splio", year: 2016, logo: "/assets/images/splio.png", description: "Plateforme de marketing relationnel." },
+        { name: "Joli'moi", year: 2018, logo: "/assets/images/jolimoi.png", description: "Plateforme de personnalisation de cosmétiques." },
+        { name: "Bizz4", year: 2019, logo: "/assets/images/b4.png", description: "bizz4, startup composée d’experts venant à la fois du monde du digital et du retail, a conçu la solution bizz4retail alliant la puissance du web et les forces émotionnelles du point de vente." },
+        { name: "ViiBE", year: 2021, logo: "/assets/images/viibe.png", description: "Solution de support vidéo pour les entreprises." },
+        { name: "Gapiane", year: 2023, logo: "/assets/images/Gapianne.png", description: "Partenaire du bien-être intime des femmes." },
+    ];
 
-    const [soloInvestments, setSoloInvestments] = useState<Investment[]>([]);
-    const [seed4softInvestments, setSeed4softInvestments] = useState<Investment[]>([]);
-
-    useEffect(() => {
-        // Placeholder data representing solo investments
-        setSoloInvestments([
-            {
-                name: 'Hightee',
-                year: 2008,
-                description: 'Accompagnateur global pour startups.',
-                logo: '/assets/images/hightee.png',
-                website: 'https://www.hightee.com',
-            },
-            {
-                name: 'SquareClock',
-                year: 2009,
-                description: 'Investissement en tant que Business Angel.',
-                logo: '/assets/images/square-clock.jpg',
-                website: 'https://www.squareclock.com',
-            },
-            {
-                name: 'SaaSValue',
-                year: 2009,
-                description: 'Cofondateur.',
-                logo: '/assets/images/saasvalue.jpg',
-                website: 'https://www.saasvalue.com',
-            },
-            {
-                name: 'Navidis',
-                year: 2009,
-                description: 'Investissement Business Angel.',
-                logo: '/images/navidis.png',
-                website: 'https://www.navidis.com',
-            },
-            {
-                name: 'Carredeboeuf.com',
-                year: 2009,
-                description: 'Investissement Business Angel.',
-                logo: '/images/carredeboeuf.png',
-                website: 'https://www.carredeboeuf.com',
-            },
-        ]);
-
-        // Placeholder data representing Seed4Soft investments
-        setSeed4softInvestments([
-            {
-                name: 'Contentsquare',
-                year: 2011,
-                description:
-                    'Accompagnement de la startup devenue licorne. Highlights: 2011: Rencontre avec Jonathan, incubé à l’ESSEC. 2012: Financement Seed4Soft (400 K$). 2013: Changement de nom en Contentsquare. 2014: Prêt BPI (2 M€). 2015: Préparation de la Série A. 2016: Série A (20 M$) avec Highland. 2017: Expansion aux États-Unis. 2018: Série B (42 M€) avec Canaan Partners. 2019: Série C (60 M$) avec Eurazeo, acquisition de Clicktale. 2020: Série D (190 M$) avec BlackRock et BPI. 2021: Série E (500 M$) avec SoftBank, 1200 collaborateurs.',
-                logo: '/images/contentsquare.png',
-                website: 'https://www.contentsquare.com',
-            },
-            {
-                name: 'CodinGame',
-                year: 2011,
-                description: 'Plateforme pour améliorer ses compétences en programmation par des jeux.',
-                logo: '/images/codingame.png',
-                website: 'https://www.codingame.com',
-            },
-            {
-                name: 'Cozy.io',
-                year: 2011,
-                description: 'Solution de stockage cloud personnel sécurisé.',
-                logo: '/images/cozyio.png',
-                website: 'https://www.cozy.io',
-            },
-            {
-                name: 'Roofstreet',
-                year: 2012,
-                description: 'Analyse des comportements de déplacement urbain.',
-                logo: '/images/roofstreet.png',
-                website: 'https://www.roofstreet.com',
-            },
-            {
-                name: 'Elevo',
-                year: 2012,
-                description: 'Plateforme de gestion de la performance et des talents.',
-                logo: '/images/elevo.png',
-                website: 'https://www.elevo.fr',
-            },
-            {
-                name: 'Qemotion',
-                year: 2013,
-                description: 'Analyse des émotions à partir des commentaires clients.',
-                logo: '/images/qemotion.png',
-                website: 'https://www.qemotion.com',
-            },
-            {
-                name: 'AddWorking',
-                year: 2014,
-                description: 'Solution de gestion des sous-traitants et travailleurs indépendants.',
-                logo: '/images/addworking.png',
-                website: 'https://www.addworking.com',
-            },
-            {
-                name: 'Tigerlily',
-                year: 2014,
-                description: 'Solution de marketing social pour les entreprises multi-sites.',
-                logo: '/images/tigerlily.png',
-                website: 'https://www.tigerlilyapps.com',
-            },
-            {
-                name: 'Confiant',
-                year: 2015,
-                description: 'Sécurité publicitaire pour protéger contre les malvertisements.',
-                logo: '/images/confiant.png',
-                website: 'https://www.confiant.com',
-            },
-            {
-                name: 'Wittyfit',
-                year: 2016,
-                description: 'Plateforme pour améliorer le bien-être des collaborateurs en entreprise.',
-                logo: '/images/wittyfit.png',
-                website: 'https://www.wittyfit.com',
-            },
-            {
-                name: 'Jus Mundi',
-                year: 2017,
-                description: 'Moteur de recherche pour le droit international.',
-                logo: '/images/jusmundi.png',
-                website: 'https://www.jusmundi.com',
-            },
-        ]);
-    }, []);
+    const successStories = [
+        {
+            name: "AS INFOR",
+            year: 2007,
+            logo: "/assets/images/asinfor-logo.png",
+            description: "Éditeur de logiciels de gestion pour le retail, acquis par Cegid.",
+            highlight: "Exit réussi",
+            icon: <FaHandshake className="text-green-500 text-2xl" />,
+            acquirer: {
+                name: "Cegid",
+                logo: "/assets/images/cegid.png"
+            }
+        },
+        {
+            name: "SQUARE CLOCK",
+            year: 2009,
+            logo: "/assets/images/square-clock.jpg",
+            description: "Solution de gestion du temps pour les entreprises.",
+            highlight: "Exit réussi",
+            icon: <FaHandshake className="text-green-500 text-2xl" />,
+            acquirer: {
+                name: "Dassault Systèmes",
+                logo: "/assets/images/Dassault-Systeme.png"
+            }
+        },
+        {
+            name: "SaasValue",
+            year: 2012,
+            logo: "/assets/images/saasvalue.jpg",
+            description: "Analyse de performance SaaS.",
+            highlight: "Exit réussi",
+            icon: <FaHandshake className="text-green-500 text-2xl" />,
+            acquirer: {
+                name: "Forwork",
+                logo: "/assets/images/ForWork.png"
+            }
+        },
+        {
+            name: "Lady Cookie",
+            year: 2014,
+            logo: "/assets/images/ladycookies.jpg",
+            description: "Marque de cookies artisanaux haut de gamme.",
+            highlight: "Exit réussi",
+            icon: <FaChartLine className="text-blue-500 text-2xl" />,
+            acquirer: {
+                name: "La Fabrique Cookies",
+                logo: "/assets/images/La Fabrique Cookie.png"
+            }
+        },
+        {
+            name: "Joli'moi",
+            year: 2018,
+            logo: "/assets/images/jolimoi.png",
+            description: "Plateforme de personnalisation de cosmétiques.",
+            highlight: "Exit réussi",
+            icon: <FaHandshake className="text-green-500 text-2xl" />,
+            acquirer: {
+                name: "Groupe Rocher",
+                logo: "/assets/images/Groupe-Rocher.png"
+            }
+        },
+        {
+            name: "ContentSquare",
+            year: 2023,
+            logo: "/assets/images/CS.png",
+            description: "Plateforme d'analyse de l'expérience digitale.",
+            highlight: "Série F de 600M$ en 2023",
+            icon: <FaTrophy className="text-yellow-400 text-2xl" />,
+        },
+    ];
 
     return (
-        <div>
+        <div className="pt-14 md:pt-20 w-full overflow-y-auto overflow-x-hidden bg-gray-50 text-gray-800">
             <Head>
                 <title>Investissements de Laurent Balayre</title>
             </Head>
-            <main className="p-6 bg-gradient-to-r from-blue-500 to-indigo-600 min-h-screen text-white">
-                <div className="max-w-6xl mx-auto">
-                    <h1 className="text-6xl font-bold mb-12 text-center">Investissements de Laurent Balayre</h1>
+            <div className="container mx-auto px-4 pt-8">
+                {/* Title Section */}
+                <div className="text-center mb-16">
+                    <h1 className="text-5xl font-extrabold mb-4 text-neutral">
+                        Laurent Balayre : 34 ans d&apos;innovation et d&apos;investissement
+                    </h1>
+                    <p className="text-xl max-w-3xl mx-auto text-gray-600 leading-relaxed">
+                        De 1990 à aujourd&apos;hui, Laurent Balayre a contribué à l&apos;évolution du paysage technologique et entrepreneurial à travers ses nombreux investissements et créations d&apos;entreprises.
+                    </p>
+                </div>
 
-                    <h2 className="text-4xl font-semibold mt-12 mb-8 text-center">Aventures Solo</h2>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-16">
-                        {soloInvestments.map((investment, index) => (
+                {/* Key Metrics Section */}
+                <div className="stats shadow w-full mb-16 bg-white">
+                    {[
+                        { value: "34", label: "années d'expérience" },
+                        { value: "25+", label: "entreprises soutenues" },
+                        { value: "5", label: "exits réussis" },
+                        { value: "1", label: "licorne (ContentSquare)" }
+                    ].map((metric, index) => (
+                        <div key={index} className="stat place-items-center">
+                            <div className="stat-value text-blue-600">{metric.value}</div>
+                            <div className="stat-desc text-gray-600">{metric.label}</div>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Investments Grid */}
+                <div className="mb-16">
+                    <h2 className="text-4xl font-bold text-center mb-8">Portefeuille d&apos;Investissements</h2>
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                        {investments.map((investment, index) => (
                             <div
                                 key={index}
-                                className="relative aspect-square bg-white rounded-lg p-4 flex items-center justify-center overflow-hidden group shadow-md hover:shadow-lg transition-shadow duration-300"
+                                className="relative aspect-square bg-white rounded-lg p-4 flex items-center justify-center overflow-hidden group shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer"
                             >
                                 <Image
                                     src={investment.logo}
                                     alt={`Logo de ${investment.name}`}
                                     width={120}
                                     height={120}
-                                    style={{ objectFit: 'contain' }}
+                                    style={{ objectFit: "contain" }}
                                     className="transition-transform duration-300 group-hover:scale-110"
                                 />
                                 <div className="absolute inset-0 bg-blue-800 bg-opacity-90 flex items-center justify-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <div className="text-sm text-center text-white">
-                                        <h3 className="text-lg font-bold mb-2">{investment.name}</h3>
+                                        <h3 className="font-bold mb-2">{investment.name}</h3>
+                                        <p>{investment.year}</p>
                                         <p>{investment.description}</p>
-                                        <Link href={investment.website} legacyBehavior>
-                                            <a target="_blank" className="btn btn-secondary text-white mt-4">Visiter le site</a>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-
-                    <h2 className="text-4xl font-semibold mt-16 mb-8 text-center">Investissements avec Seed4Soft</h2>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                        {seed4softInvestments.map((investment, index) => (
-                            <div
-                                key={index}
-                                className="relative aspect-square bg-white rounded-lg p-4 flex items-center justify-center overflow-hidden group shadow-md hover:shadow-lg transition-shadow duration-300"
-                            >
-                                <Image
-                                    src={investment.logo}
-                                    alt={`Logo de ${investment.name}`}
-                                    width={120}
-                                    height={120}
-                                    style={{ objectFit: 'contain' }}
-                                    className="transition-transform duration-300 group-hover:scale-110"
-                                />
-                                <div className="absolute inset-0 bg-blue-800 bg-opacity-90 flex items-center justify-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <div className="text-sm text-center text-white">
-                                        <h3 className="text-lg font-bold mb-2">{investment.name}</h3>
-                                        <p>{investment.description}</p>
-                                        <Link href={investment.website} legacyBehavior>
-                                            <a target="_blank" className="btn btn-secondary text-white mt-4">Visiter le site</a>
-                                        </Link>
                                     </div>
                                 </div>
                             </div>
                         ))}
                     </div>
                 </div>
-            </main>
+
+                {/* Success Stories Section */}
+                <PerformancesSection successStories={successStories} />
+
+            </div>
         </div>
     );
-}
+};
 
-// Add this to your tailwind.config.js to include DaisyUI plugin
-// module.exports = {
-//   plugins: [require("daisyui")],
-// }
+export default InvestmentsPage;

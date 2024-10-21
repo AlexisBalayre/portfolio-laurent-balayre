@@ -7,9 +7,10 @@ import {
   BuildingStorefrontIcon,
   EnvelopeIcon as EnvelopeIconOutline,
 } from "@heroicons/react/24/outline";
-import { CalendarIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
+import { EnvelopeIcon } from "@heroicons/react/24/solid";
 import { useOutsideClick } from "~~/hooks";
 import { useRouter } from "next/router";
+import { LinkedinLogo } from '~~/public/assets/svg/LinkedinLogo';
 
 interface HeaderMenuLink {
   label: string;
@@ -26,19 +27,19 @@ export const menuLinks: HeaderMenuLink[] = [
     href: "/",
   },
   {
-    label: "ASINFOR",
-    section: "asinfor",
-    icon: <BuildingStorefrontIcon className="h-4 w-4" />,
-    href: "/asinfor",
-  },
-  {
     label: "Investissements",
     section: "investissements",
     icon: <ChartBarIcon className="h-4 w-4" />,
     href: "/investissements",
   },
   {
-    label: "Me contacter",
+    label: "AS INFOR",
+    section: "asinfor",
+    icon: <BuildingStorefrontIcon className="h-4 w-4" />,
+    href: "/asinfor",
+  },
+  {
+    label: "Contacter",
     section: "contact",
     icon: <EnvelopeIconOutline className="h-4 w-4" />,
   },
@@ -150,13 +151,13 @@ export const Header = () => {
           <EnvelopeIcon className="w-6 h-6" />
         </a>
         <a
-          href="https://calendly.com/laurent-balayre"
+          href="https://www.linkedin.com/in/laurentbalayre/"
           target="_blank"
           rel="noopener noreferrer"
           className="transition flex text-primary-content hover:text-base-200"
-          aria-label="Calendly of Laurent Balayre"
+          aria-label="Linkedin of Laurent Balayre"
         >
-          <CalendarIcon className="w-6 h-6" />
+          <LinkedinLogo className="w-6 h-6" />
         </a>
       </div>
     </div>

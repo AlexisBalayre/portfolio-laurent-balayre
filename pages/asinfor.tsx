@@ -29,7 +29,7 @@ const milestones = [
 
 const ASINFORContent: NextPage = () => {
     return (
-        <div className="pt-10 md:pt-20 w-full overflow-y-auto overflow-x-hidden bg-gray-50 text-gray-800">
+        <div className="pt-14 md:pt-20 w-full overflow-y-auto overflow-x-hidden bg-gray-50 text-gray-800">
             <div className="container mx-auto px-4 pt-8">
                 {/* Title Section with Logo */}
                 <div className="text-center mb-16">
@@ -43,10 +43,10 @@ const ASINFORContent: NextPage = () => {
                         />
                     </div>
                     <h1 className="text-5xl font-extrabold mb-4 text-neutral">
-                    ASINFOR : Une Success Story du Retail Tech
+                    AS INFOR : Une Success Story du Retail Tech
                     </h1>
                     <p className="text-xl max-w-3xl mx-auto text-gray-600 leading-relaxed">
-                        De 1994 à 2007, ASINFOR a participé à l'évolution du commerce de détail en développant des solutions logicielles innovantes. Cette aventure entrepreneuriale, initiée par Laurent Balayre, s'est conclue par l'intégration au groupe CEGID.
+                        De 1994 à 2007, ASINFOR a participé à l&apos;évolution du commerce de détail en développant des solutions logicielles innovantes. Cette aventure entrepreneuriale, initiée par Laurent Balayre, s&apos;est conclue par l&apos;intégration au groupe CEGID.
                     </p>
                 </div>
 
@@ -73,7 +73,7 @@ const ASINFORContent: NextPage = () => {
 
                 {/* Histoire Section */}
                 <section className="mb-16">
-                    <h2 className="text-3xl font-bold mb-8 text-center text-neutral">Le Parcours d'ASINFOR</h2>
+                    <h2 className="text-3xl font-bold mb-8 text-center text-neutral">Le Parcours d&apos;ASINFOR</h2>
                     <div className="space-y-4">
                         {milestones.map((milestone, index) => (
                             <div key={index} className="card bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300">
@@ -116,7 +116,7 @@ const ASINFORContent: NextPage = () => {
 
                 {/* Croissance Section */}
                 <section className="mb-16">
-                    <h2 className="text-3xl font-bold mb-8 text-center text-neutral">Évolution de l'Entreprise</h2>
+                    <h2 className="text-3xl font-bold mb-8 text-center text-neutral">Évolution de l&apos;Entreprise</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div className="card bg-white shadow-xl">
                             <div className="card-body">
@@ -126,13 +126,13 @@ const ASINFORContent: NextPage = () => {
                         </div>
                         <div className="card bg-white shadow-xl">
                             <div className="card-body">
-                                <h3 className="card-title text-blue-600">Évolution de l'Équipe</h3>
+                                <h3 className="card-title text-blue-600">Évolution de l&apos;Équipe</h3>
                                 <TeamEvolutionChart />
                             </div>
                         </div>
                         <div className="card bg-white shadow-xl md:col-span-2">
                             <div className="card-body">
-                                <h3 className="card-title text-blue-600">Progression du Chiffre d'Affaires</h3>
+                                <h3 className="card-title text-blue-600">Progression du Chiffre d&apos;Affaires</h3>
                                 <RevenueEvolutionChart />
                             </div>
                         </div>

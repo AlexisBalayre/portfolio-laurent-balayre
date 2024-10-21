@@ -37,8 +37,8 @@ const Home: NextPage = () => {
                                 <Image
                                     src="/assets/images/profile_picture.jpeg"
                                     alt="Photo de Laurent Balayre"
-                                    width={400}
-                                    height={400}
+                                    width={300}
+                                    height={300}
                                     className="rounded-full shadow-xl"
                                 />
                             </div>
