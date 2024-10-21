@@ -29,7 +29,7 @@ const InvestmentsPage = () => {
         { name: "Splio", year: 2016, logo: "/assets/images/splio.png", description: "Plateforme de marketing relationnel." },
         { name: "Joli'moi", year: 2018, logo: "/assets/images/jolimoi.png", description: "Plateforme de personnalisation de cosmétiques." },
         { name: "Bizz4", year: 2019, logo: "/assets/images/b4.png", description: "bizz4, startup composée d’experts venant à la fois du monde du digital et du retail, a conçu la solution bizz4retail alliant la puissance du web et les forces émotionnelles du point de vente." },
-        { name: "ViiBE", year: 2021, logo: "/assets/images/viibe.png", description: "Solution de support vidéo pour les entreprises." },
+        { name: "ViiBE", year: 2021, logo: "/assets/images/Viibe.png", description: "Solution de support vidéo pour les entreprises." },
         { name: "Gapiane", year: 2023, logo: "/assets/images/Gapianne.png", description: "Partenaire du bien-être intime des femmes." },
     ];
 

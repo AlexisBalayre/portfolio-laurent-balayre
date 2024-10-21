@@ -11,7 +11,7 @@ const clients = [
     { name: "Sephora", logo: "/assets/images/Sephora-Logo.png", description: "Référence mondiale de la beauté, marquant la percée dans le secteur en 2000." },
     { name: "Norauto", logo: "/assets/images/norauto.png", description: "Leader de l'entretien automobile, diversifiant le portefeuille en 2003." },
     { name: "L'Oréal", logo: "/assets/images/LOreal-Logo.png", description: "Numéro un mondial des cosmétiques, renforçant la position en 2005." },
-    { name: "Sia Home", logo: "/assets/images/Sia.png", description: "Marque emblématique de la décoration, élargissant l'expertise retail." },
+    { name: "Sia Home", logo: "/assets/images/sia.png", description: "Marque emblématique de la décoration, élargissant l'expertise retail." },
     { name: "Photoservice", logo: "/assets/images/photoservice.jpg", description: "Innovateur dans l'impression photo, illustrant l'adaptabilité technologique." },
     { name: "Cultura", logo: "/assets/images/logo-cultura.jpeg", description: "Acteur majeur de la culture, enrichissant l'offre pour le retail spécialisé." },
     { name: "Lenôtre", logo: "/assets/images/logo-lenotre.jpeg", description: "Icône de la gastronomie française, preuve de la polyvalence sectorielle." },
