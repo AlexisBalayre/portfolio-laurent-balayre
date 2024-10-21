@@ -3,8 +3,14 @@ import React from "react";
 import Image from "next/image";
 
 interface TimelineProps {
-  items: any[];
+  items: {
+    logo: string;
+    title: string;
+    period: string;
+    description: string;
+  }[];
 }
+
 
 const Timeline: React.FC<TimelineProps> = ({ items }) => {
   return (

@@ -3,7 +3,12 @@ import React from "react";
 import Image from "next/image";
 
 interface TimelineDarkProps {
-  items: any[];
+  items: {
+    logo: string;
+    title: string;
+    period: string;
+    description: string;
+  }[];
 }
 
 const TimelineDark: React.FC<TimelineDarkProps> = ({ items }) => {

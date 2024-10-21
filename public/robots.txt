@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://laurent.balayre.com
+
+# Sitemaps
+Sitemap: https://laurent.balayre.com/sitemap.xml
