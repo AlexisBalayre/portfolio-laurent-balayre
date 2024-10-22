@@ -31,7 +31,7 @@ export const Footer = () => {
         </div>
         <div className="border-t border-blue-400 pt-4 flex flex-row justify-between items-center">
           <p className="text-sm mb-2 md:mb-0">
-            Copyright © {currentYear} Laurent Balayre. Tous droits réservés.
+            Copyright © {currentYear} Laurent Balayre. All rights reserved.
           </p>
         </div>
       </div>

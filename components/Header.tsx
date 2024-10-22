@@ -21,16 +21,16 @@ interface HeaderMenuLink {
 
 export const menuLinks: HeaderMenuLink[] = [
   {
-    label: "À propos",
+    label: "Biography",
     section: "home",
     icon: <UserIcon className="h-4 w-4" />,
     href: "/",
   },
   {
-    label: "Investissements",
-    section: "investissements",
+    label: "Investments",
+    section: "investments",
     icon: <ChartBarIcon className="h-4 w-4" />,
-    href: "/investissements",
+    href: "/investments",
   },
   {
     label: "AS INFOR",
@@ -39,7 +39,7 @@ export const menuLinks: HeaderMenuLink[] = [
     href: "/asinfor",
   },
   {
-    label: "Contacter",
+    label: "Contact",
     section: "contact",
     icon: <EnvelopeIconOutline className="h-4 w-4" />,
   },

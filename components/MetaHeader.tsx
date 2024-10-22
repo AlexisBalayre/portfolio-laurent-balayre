@@ -4,29 +4,29 @@ import Head from "next/head";
 export const MetaHeader = () => {
   return (
     <Head>
-      <title>Laurent Balayre: Entrepreneur et Investisseur</title>
+      <title>Laurent Balayre: Entrepreneur and Investor</title>
       <meta charSet="utf-8" />
       <meta
         name="description"
-        content="Découvrez le parcours de Laurent Balayre, entrepreneur et investisseur chevronné. 34 ans d'innovation et d'investissements dans le domaine technologique."
+        content="Discover the story of Laurent Balayre, a seasoned entrepreneur and investor. 34 years of innovation and investment in technology."
       />
       <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="Laurent Balayre - Entrepreneur et Investisseur" />
-      <meta property="og:title" content="Laurent Balayre - 34 ans d'innovation et d'investissement" />
+      <meta property="og:site_name" content="Laurent Balayre - Entrepreneur and Investor" />
+      <meta property="og:title" content="Laurent Balayre - 34 years of innovation and investment" />
       <meta
         property="og:description"
-        content="Explorez les succès et les investissements de Laurent Balayre dans le secteur technologique, de AS INFOR à ContentSquare."
+        content="Explore Laurent Balayre's successes and investments in the technology sector, from AS INFOR to ContentSquare."
       />
       <meta property="og:image" content="https://laurent.balayre.com/preview.png" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta
         name="twitter:description"
-        content="Découvrez le parcours de Laurent Balayre, de l'entrepreneuriat à l'investissement dans des startups innovantes."
+        content="Discover Laurent Balayre's career path, from entrepreneurship to investment in innovative startups."
       />
       <meta name="twitter:image" content="https://laurent.balayre.com/preview.png" />
       <meta
         name="keywords"
-        content="Laurent Balayre, Entrepreneur, Investisseur, Tech, Startup, Innovation, AS INFOR, ContentSquare, SaaS, Retail"
+        content="Laurent Balayre, Entrepreneur, Investor, Tech, Startup, Innovation, AS INFOR, ContentSquare, SaaS, Retail"
       />
       <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
