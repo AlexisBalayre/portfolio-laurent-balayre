@@ -34,6 +34,7 @@ const teamData = [
     { year: 2005, employees: 48 },
     { year: 2006, employees: 55 },
     { year: 2007, employees: 65 },
+    { year: 2008, employees: 365 },
 ];
 
 export const TeamEvolutionChart = () => (
