@@ -55,7 +55,7 @@ const Home: NextPage = () => {
                             </div>
                             <div className="lg:w-1/2 flex justify-center lg:justify-end">
                                 <Image
-                                    src="/assets/images/profile_picture.jpeg"
+                                    src="/assets/images/profile_picture_bis.jpeg"
                                     alt="Photo de Laurent Balayre"
                                     width={300}
                                     height={300}
