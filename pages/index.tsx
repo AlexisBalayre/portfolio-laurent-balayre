@@ -37,7 +37,7 @@ const Home: NextPage = () => {
                                     with the creation of Hightee, before becoming a key investor
                                     in the startup ecosystem. Having met Jonathan Cherki at the
                                     ESSEC incubator, he supported him from the outset and became
-                                    Content Square&apos;s first investor. Laurent has also
+                                    Contentsquare&apos;s first investor. Laurent has also
                                     financed companies such as SquareClock (sold to Dassault
                                     Systèmes) and SaasValue (sold to Forwork). In 2018, he
                                     launched Bizz4, creator of Bizz4Retail, a revolutionary SaaS

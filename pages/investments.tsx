@@ -12,7 +12,7 @@ const InvestmentsPage = () => {
         { name: "Carré de boeuf", year: 2009, logo: "/assets/images/carre-de-boeuf.jpeg", description: "Online meat e-commerce." },
         { name: "Idées À Faire", year: 2009, logo: "/assets/images/IAF.jpg", description: "DIY magazine." },
         { name: "SaasValue", year: 2010, logo: "/assets/images/saasvalue.jpg", description: "Performance improvement solution." },
-        { name: "ContentSquare", year: 2011, logo: "/assets/images/CS.png", description: "Digital experience analytics platform." },
+        { name: "Contentsquare", year: 2011, logo: "/assets/images/CS.png", description: "Digital experience analytics platform." },
         { name: "CodinGame", year: 2011, logo: "/assets/images/codingame.png", description: "Platform for coding challenges and tech recruitment." },
         { name: "Cozy.io", year: 2011, logo: "/assets/images/cozy.png", description: "Secure personal cloud storage solution." },
         { name: "Urban-Cab", year: 2012, logo: "/assets/images/urban-cab.jpg", description: "Eco-friendly last-mile delivery solution." },
