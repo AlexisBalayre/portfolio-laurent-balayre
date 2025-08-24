@@ -39,13 +39,9 @@ const nextConfig = {
             },
             {
                 protocol: 'https',
-                hostname: "alexis.balayre.com"
+                hostname: "laurent.balayre.com"
             },
         ],
-    },
-    i18n: {
-        locales: ["/"],
-        defaultLocale: "/",
     },
 };
 
