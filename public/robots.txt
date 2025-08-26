@@ -1,9 +1,6 @@
-# *
+# robots.txt file for Laurent Balayre Portfolio
+
 User-agent: *
 Allow: /
 
-# Host
-Host: https://laurent.balayre.com
-
-# Sitemaps
 Sitemap: https://laurent.balayre.com/sitemap.xml
